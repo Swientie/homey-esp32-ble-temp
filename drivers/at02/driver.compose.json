@@ -12,9 +12,17 @@
   ],
   "capabilities": [
     "measure_temperature.probe1",
+    "target_temperature.probe1",
+    "alarm_temperature.probe1",
     "measure_temperature.probe2",
+    "target_temperature.probe2",
+    "alarm_temperature.probe2",
     "measure_temperature.probe3",
+    "target_temperature.probe3",
+    "alarm_temperature.probe3",
     "measure_temperature.probe4",
+    "target_temperature.probe4",
+    "alarm_temperature.probe4",
     "measure_temperature.bbq",
     "alarm_generic"
   ],
@@ -26,12 +34,44 @@
       },
       "decimals": 1
     },
+    "target_temperature.probe1": {
+      "title": {
+        "en": "Target 1",
+        "nl": "Doel probe 1"
+      },
+      "min": 0,
+      "max": 150,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_temperature.probe1": {
+      "title": {
+        "en": "Target reached 1",
+        "nl": "Doel bereikt 1"
+      }
+    },
     "measure_temperature.probe2": {
       "title": {
         "en": "Probe 2",
         "nl": "Probe 2"
       },
       "decimals": 1
+    },
+    "target_temperature.probe2": {
+      "title": {
+        "en": "Target 2",
+        "nl": "Doel probe 2"
+      },
+      "min": 0,
+      "max": 150,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_temperature.probe2": {
+      "title": {
+        "en": "Target reached 2",
+        "nl": "Doel bereikt 2"
+      }
     },
     "measure_temperature.probe3": {
       "title": {
@@ -40,12 +80,44 @@
       },
       "decimals": 1
     },
+    "target_temperature.probe3": {
+      "title": {
+        "en": "Target 3",
+        "nl": "Doel probe 3"
+      },
+      "min": 0,
+      "max": 150,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_temperature.probe3": {
+      "title": {
+        "en": "Target reached 3",
+        "nl": "Doel bereikt 3"
+      }
+    },
     "measure_temperature.probe4": {
       "title": {
         "en": "Probe 4",
         "nl": "Probe 4"
       },
       "decimals": 1
+    },
+    "target_temperature.probe4": {
+      "title": {
+        "en": "Target 4",
+        "nl": "Doel probe 4"
+      },
+      "min": 0,
+      "max": 150,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_temperature.probe4": {
+      "title": {
+        "en": "Target reached 4",
+        "nl": "Doel bereikt 4"
+      }
     },
     "measure_temperature.bbq": {
       "title": {

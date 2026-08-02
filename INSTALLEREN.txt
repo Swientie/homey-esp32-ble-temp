@@ -1,0 +1,21 @@
+AT-02 Homey v1.2.1 - doeltemperatuur per probe
+
+Nieuw:
+- Doeltemperatuur voor probe 1 t/m 4
+- Standaard 75,0 °C
+- Instelbaar van 0 tot 150 °C in stappen van 0,5 °C
+- Alarm 'Doel bereikt' per probe
+- Homey maakt automatisch Flow-kaarten voor de doeltemperatuur en het alarm
+
+Installeren:
+1. Maak een back-up van de bestaande projectmap.
+2. Pak deze ZIP uit.
+3. Kopieer .homeycompose en drivers naar:
+   C:\Users\eanau\Documents\nl.edwinnauta.at02
+4. Kies Bestanden vervangen/samenvoegen.
+5. Voer uit:
+   cd C:\Users\eanau\Documents\nl.edwinnauta.at02
+   homey app run
+6. Controleer de nieuwe doelen en alarmen.
+7. Als alles werkt:
+   homey app install
