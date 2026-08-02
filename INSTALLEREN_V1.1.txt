@@ -1,0 +1,9 @@
+1. Stop homey app run met Ctrl+C.
+2. Maak een back-up van C:\Users\eanau\Documents\nl.edwinnauta.at02
+3. Pak deze ZIP uit en kopieer alle bestanden naar die projectmap.
+4. Kies Bestanden vervangen.
+5. Voer uit:
+   npm install
+   homey app run
+6. Het bestaande Homey-apparaat hoeft niet opnieuw gekoppeld te worden.
+7. Controleer via het tandwiel de nieuwe Geavanceerde instellingen.

@@ -1,0 +1,84 @@
+[
+  {
+    "type": "group",
+    "label": {
+      "en": "MQTT broker",
+      "nl": "MQTT-broker"
+    },
+    "children": [
+      {
+        "id": "mqtt_host",
+        "type": "text",
+        "label": {
+          "en": "Broker address",
+          "nl": "Brokeradres"
+        },
+        "value": "172.16.1.12",
+        "highlight": true
+      },
+      {
+        "id": "mqtt_port",
+        "type": "number",
+        "label": {
+          "en": "Port",
+          "nl": "Poort"
+        },
+        "value": 1883,
+        "min": 1,
+        "max": 65535
+      },
+      {
+        "id": "mqtt_username",
+        "type": "text",
+        "label": {
+          "en": "Username",
+          "nl": "Gebruikersnaam"
+        },
+        "value": "AT02"
+      },
+      {
+        "id": "mqtt_password",
+        "type": "password",
+        "label": {
+          "en": "Password",
+          "nl": "Wachtwoord"
+        },
+        "value": "AT02"
+      },
+      {
+        "id": "mqtt_base_topic",
+        "type": "text",
+        "label": {
+          "en": "Base topic",
+          "nl": "Basistopic"
+        },
+        "value": "at02"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Connection monitoring",
+      "nl": "Verbindingsbewaking"
+    },
+    "children": [
+      {
+        "id": "offline_timeout",
+        "type": "number",
+        "label": {
+          "en": "Offline timeout",
+          "nl": "Offline na"
+        },
+        "value": 180,
+        "min": 30,
+        "max": 3600,
+        "step": 10,
+        "units": {
+          "en": "seconds",
+          "nl": "seconden"
+        }
+      }
+    ]
+  }
+]
