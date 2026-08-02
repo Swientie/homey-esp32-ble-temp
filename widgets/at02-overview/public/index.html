@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AT-02 BBQ</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--homey-background-color);color:var(--homey-text-color)}
+    .widget{padding:16px}
+    .header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+    .title{font-size:20px;font-weight:700}
+    .subtitle{margin-top:3px;font-size:13px;color:var(--homey-text-color-light)}
+    .status{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600;background:rgba(42,170,85,.15)}
+    .status.offline{background:rgba(220,60,60,.15)}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--homey-color-success)}
+    .status.offline .dot{background:var(--homey-color-danger)}
+    .hero{display:flex;align-items:center;justify-content:space-between;padding:15px 16px;margin-bottom:12px;border:1px solid var(--homey-line-color);border-radius:14px}
+    .hero-label,.probe-name,.footer{color:var(--homey-text-color-light)}
+    .hero-label,.probe-name{font-size:13px}
+    .hero-value{font-size:34px;font-weight:750;margin-top:5px}
+    .flame{font-size:30px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .probe{padding:13px 14px;border:1px solid var(--homey-line-color-light);border-radius:12px}
+    .probe-value{margin-top:6px;font-size:23px;font-weight:700}
+    .muted{color:var(--homey-text-color-light)}
+    .footer{display:flex;justify-content:space-between;gap:10px;margin-top:13px;font-size:12px}
+    .error{display:none;margin-top:10px;color:var(--homey-color-danger);font-size:13px}
+  </style>
+</head>
+<body>
+  <main class="widget">
+    <header class="header">
+      <div>
+        <div class="title" id="device-name">AT-02 BBQ</div>
+        <div class="subtitle">Live BBQ-temperaturen</div>
+      </div>
+      <div class="status offline" id="status">
+        <span class="dot"></span>
+        <span id="status-text">Verbinden…</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="hero-label">BBQ / omgeving</div>
+        <div class="hero-value" id="bbq">--</div>
+      </div>
+      <div class="flame">🔥</div>
+    </section>
+
+    <section class="grid">
+      <article class="probe"><div class="probe-name">Probe 1</div><div class="probe-value" id="probe1">--</div></article>
+      <article class="probe"><div class="probe-name">Probe 2</div><div class="probe-value" id="probe2">--</div></article>
+      <article class="probe"><div class="probe-name">Probe 3</div><div class="probe-value" id="probe3">--</div></article>
+      <article class="probe"><div class="probe-name">Probe 4</div><div class="probe-value" id="probe4">--</div></article>
+    </section>
+
+    <footer class="footer">
+      <span id="connection">Bluetoothstatus onbekend</span>
+      <span id="updated">Nog niet bijgewerkt</span>
+    </footer>
+
+    <div class="error" id="error"></div>
+  </main>
+
+  <script>
+    function onHomeyReady(Homey) {
+      const settings = Homey.getSettings();
+      const deviceIds = Homey.getDeviceIds();
+      const deviceId = deviceIds.length ? deviceIds[0] : '';
+      const intervalSeconds = Number(settings.refresh_interval || 2);
+
+      const formatTemperature = value =>
+        typeof value === 'number' && Number.isFinite(value)
+          ? `${value.toFixed(1)} °C`
+          : '--';
+
+      const render = data => {
+        document.getElementById('device-name').textContent = data.name || 'AT-02 BBQ';
+        document.getElementById('bbq').textContent = formatTemperature(data.bbq);
+
+        data.probes.forEach((value, index) => {
+          const element = document.getElementById(`probe${index + 1}`);
+          element.textContent = formatTemperature(value);
+          element.classList.toggle('muted', value === null);
+        });
+
+        const online = Boolean(data.found && data.available && !data.connectionLost);
+        const status = document.getElementById('status');
+        status.classList.toggle('offline', !online);
+        document.getElementById('status-text').textContent = online ? 'Verbonden' : 'Niet verbonden';
+        document.getElementById('connection').textContent =
+          data.connectionLost ? 'Bluetoothverbinding verbroken' : 'Bluetooth verbonden';
+        document.getElementById('updated').textContent =
+          `Bijgewerkt ${new Date(data.updatedAt).toLocaleTimeString('nl-NL')}`;
+        document.getElementById('error').style.display = 'none';
+      };
+
+      const refresh = async () => {
+        try {
+          const path = deviceId
+            ? `/status?deviceId=${encodeURIComponent(deviceId)}`
+            : '/status';
+          const data = await Homey.api('GET', path, {});
+          render(data);
+        } catch (error) {
+          const element = document.getElementById('error');
+          element.textContent = 'De gegevens konden niet worden geladen.';
+          element.style.display = 'block';
+          console.error(error);
+        }
+      };
+
+      Homey.ready({ height: 360 });
+      refresh();
+      setInterval(refresh, Math.max(1, intervalSeconds) * 1000);
+    }
+  </script>
+</body>
+</html>

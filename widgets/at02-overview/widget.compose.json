@@ -1,0 +1,62 @@
+{
+  "name": {
+    "en": "AT-02 BBQ Overview",
+    "nl": "AT-02 BBQ Overzicht"
+  },
+  "height": 360,
+  "transparent": false,
+  "settings": [
+    {
+      "id": "device",
+      "type": "devices",
+      "title": {
+        "en": "AT-02 device",
+        "nl": "AT-02-apparaat"
+      },
+      "singular": true,
+      "scope": "app",
+      "filter": {
+        "class": "sensor",
+        "capabilities": "measure_temperature.probe1"
+      }
+    },
+    {
+      "id": "refresh_interval",
+      "type": "dropdown",
+      "title": {
+        "en": "Refresh interval",
+        "nl": "Verversingsinterval"
+      },
+      "value": "2",
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "en": "1 second",
+            "nl": "1 seconde"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2 seconds",
+            "nl": "2 seconden"
+          }
+        },
+        {
+          "id": "5",
+          "title": {
+            "en": "5 seconds",
+            "nl": "5 seconden"
+          }
+        }
+      ]
+    }
+  ],
+  "api": {
+    "getStatus": {
+      "method": "GET",
+      "path": "/status"
+    }
+  }
+}

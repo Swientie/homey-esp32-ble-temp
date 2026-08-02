@@ -1,0 +1,17 @@
+AT-02 Homey v1.2 - Stap 1: grafische dashboardwidget
+
+1. Stop homey app run met Ctrl+C.
+2. Maak een back-up van de huidige projectmap.
+3. Pak deze ZIP uit.
+4. Kopieer de mappen .homeycompose en widgets naar:
+   C:\Users\eanau\Documents\nl.edwinnauta.at02
+5. Kies Bestanden vervangen/samenvoegen.
+6. Voer uit:
+   cd C:\Users\eanau\Documents\nl.edwinnauta.at02
+   homey app run
+7. Open het Homey Dashboard.
+8. Kies Widget toevoegen.
+9. Kies AT-02 BBQ Overzicht.
+10. Selecteer AT-02 BBQ en voeg de widget toe.
+
+De gewone apparaattegel blijft bestaan. De grafische weergave verschijnt als dashboardwidget.
