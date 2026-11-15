@@ -1,0 +1,10 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "BBQ session",
+    "nl": "BBQ-sessie"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "toggle"
+}

@@ -1,0 +1,1007 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "nl.edwinnauta.at02",
+  "version": "2.0.0",
+  "compatibility": ">=12.2.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "AT-02 BBQ",
+    "nl": "AT-02 BBQ"
+  },
+  "description": {
+    "en": "AT-02 BBQ thermometer through an ESP32 MQTT gateway.",
+    "nl": "AT-02 BBQ-thermometer via een ESP32 MQTT-gateway."
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "author": {
+    "name": "Edwin Nauta",
+    "email": "nauta.edwin@gmail.com"
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "AT-02 BBQ",
+        "nl": "AT-02 BBQ"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "lan"
+      ],
+      "capabilities": [
+        "measure_temperature.probe1",
+        "target_temperature.probe1",
+        "alarm_generic.probe1",
+        "measure_temperature.probe2",
+        "target_temperature.probe2",
+        "alarm_generic.probe2",
+        "measure_temperature.probe3",
+        "target_temperature.probe3",
+        "alarm_generic.probe3",
+        "measure_temperature.probe4",
+        "target_temperature.probe4",
+        "alarm_generic.probe4",
+        "measure_temperature.bbq",
+        "target_temperature.bbq",
+        "alarm_generic.bbq",
+        "measure_signal_strength",
+        "cooking_profile",
+        "selected_profile",
+        "session_active",
+        "session_duration",
+        "pitmaster_overview",
+        "session_summary",
+        "signal_quality",
+        "remaining_difference",
+        "live_summary",
+        "target_summary",
+        "progress_display",
+        "rate_status",
+        "remaining_time_text",
+        "cooking_progress",
+        "temperature_rate",
+        "remaining_time",
+        "active_probe",
+        "bbq_status",
+        "alarm_generic"
+      ],
+      "capabilitiesOptions": {
+        "measure_temperature.probe1": {
+          "title": {
+            "en": "Probe 1",
+            "nl": "Probe 1"
+          },
+          "decimals": 1
+        },
+        "target_temperature.probe1": {
+          "title": {
+            "en": "Target probe 1",
+            "nl": "Doel probe 1"
+          },
+          "min": 0,
+          "max": 250,
+          "step": 0.5,
+          "decimals": 1
+        },
+        "alarm_generic.probe1": {
+          "title": {
+            "en": "Target reached 1",
+            "nl": "Doel bereikt 1"
+          }
+        },
+        "measure_temperature.probe2": {
+          "title": {
+            "en": "Probe 2",
+            "nl": "Probe 2"
+          },
+          "decimals": 1
+        },
+        "target_temperature.probe2": {
+          "title": {
+            "en": "Target probe 2",
+            "nl": "Doel probe 2"
+          },
+          "min": 0,
+          "max": 250,
+          "step": 0.5,
+          "decimals": 1
+        },
+        "alarm_generic.probe2": {
+          "title": {
+            "en": "Target reached 2",
+            "nl": "Doel bereikt 2"
+          }
+        },
+        "measure_temperature.probe3": {
+          "title": {
+            "en": "Probe 3",
+            "nl": "Probe 3"
+          },
+          "decimals": 1
+        },
+        "target_temperature.probe3": {
+          "title": {
+            "en": "Target probe 3",
+            "nl": "Doel probe 3"
+          },
+          "min": 0,
+          "max": 250,
+          "step": 0.5,
+          "decimals": 1
+        },
+        "alarm_generic.probe3": {
+          "title": {
+            "en": "Target reached 3",
+            "nl": "Doel bereikt 3"
+          }
+        },
+        "measure_temperature.probe4": {
+          "title": {
+            "en": "Probe 4",
+            "nl": "Probe 4"
+          },
+          "decimals": 1
+        },
+        "target_temperature.probe4": {
+          "title": {
+            "en": "Target probe 4",
+            "nl": "Doel probe 4"
+          },
+          "min": 0,
+          "max": 250,
+          "step": 0.5,
+          "decimals": 1
+        },
+        "alarm_generic.probe4": {
+          "title": {
+            "en": "Target reached 4",
+            "nl": "Doel bereikt 4"
+          }
+        },
+        "measure_temperature.bbq": {
+          "title": {
+            "en": "BBQ",
+            "nl": "BBQ"
+          },
+          "decimals": 1
+        },
+        "target_temperature.bbq": {
+          "title": {
+            "en": "BBQ target",
+            "nl": "Doel BBQ"
+          },
+          "min": 0,
+          "max": 250,
+          "step": 0.5,
+          "decimals": 1
+        },
+        "alarm_generic.bbq": {
+          "title": {
+            "en": "BBQ target reached",
+            "nl": "BBQ-doel bereikt"
+          }
+        },
+        "measure_signal_strength": {
+          "title": {
+            "en": "Bluetooth signal",
+            "nl": "Bluetooth-signaal"
+          },
+          "decimals": 0
+        },
+        "bbq_status": {
+          "title": {
+            "en": "BBQ status",
+            "nl": "BBQ-status"
+          }
+        },
+        "alarm_generic": {
+          "title": {
+            "en": "Connection lost",
+            "nl": "Verbinding verbroken"
+          }
+        },
+        "cooking_profile": {
+          "title": {
+            "en": "Cooking profile",
+            "nl": "Bereidingsprofiel"
+          }
+        },
+        "active_probe": {
+          "title": {
+            "en": "Active probe",
+            "nl": "Actieve probe"
+          }
+        },
+        "selected_profile": {
+          "title": {
+            "en": "Selected dish",
+            "nl": "Gekozen gerecht"
+          }
+        },
+        "session_active": {
+          "title": {
+            "en": "BBQ session",
+            "nl": "BBQ-sessie"
+          }
+        },
+        "session_duration": {
+          "title": {
+            "en": "Session duration",
+            "nl": "Sessieduur"
+          }
+        },
+        "cooking_progress": {
+          "title": {
+            "en": "Cooking progress",
+            "nl": "Bereidingsvoortgang"
+          }
+        },
+        "temperature_rate": {
+          "title": {
+            "en": "Temperature rate",
+            "nl": "Temperatuurstijging"
+          }
+        },
+        "remaining_time": {
+          "title": {
+            "en": "Estimated time remaining",
+            "nl": "Geschatte resterende tijd"
+          }
+        },
+        "live_summary": {
+          "title": {
+            "en": "Live overview",
+            "nl": "Live-overzicht"
+          }
+        },
+        "target_summary": {
+          "title": {
+            "en": "Active targets",
+            "nl": "Actieve doelen"
+          }
+        },
+        "progress_display": {
+          "title": {
+            "en": "Progress",
+            "nl": "Voortgang"
+          }
+        },
+        "rate_status": {
+          "title": {
+            "en": "Temperature trend",
+            "nl": "Temperatuurtrend"
+          }
+        },
+        "remaining_time_text": {
+          "title": {
+            "en": "Time remaining",
+            "nl": "Resterende tijd"
+          }
+        },
+        "pitmaster_overview": {
+          "title": {
+            "en": "Pitmaster overview",
+            "nl": "Pitmaster-overzicht"
+          }
+        },
+        "session_summary": {
+          "title": {
+            "en": "Session summary",
+            "nl": "Sessiesamenvatting"
+          }
+        },
+        "signal_quality": {
+          "title": {
+            "en": "Bluetooth quality",
+            "nl": "Bluetooth-kwaliteit"
+          }
+        },
+        "remaining_difference": {
+          "title": {
+            "en": "Degrees remaining",
+            "nl": "Nog te gaan"
+          }
+        }
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "at02",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "MQTT broker",
+            "nl": "MQTT-broker"
+          },
+          "children": [
+            {
+              "id": "mqtt_host",
+              "type": "text",
+              "label": {
+                "en": "Broker address",
+                "nl": "Brokeradres"
+              },
+              "value": "172.16.1.12",
+              "highlight": true
+            },
+            {
+              "id": "mqtt_port",
+              "type": "number",
+              "label": {
+                "en": "Port",
+                "nl": "Poort"
+              },
+              "value": 1883,
+              "min": 1,
+              "max": 65535
+            },
+            {
+              "id": "mqtt_username",
+              "type": "text",
+              "label": {
+                "en": "Username",
+                "nl": "Gebruikersnaam"
+              },
+              "value": "AT02"
+            },
+            {
+              "id": "mqtt_password",
+              "type": "password",
+              "label": {
+                "en": "Password",
+                "nl": "Wachtwoord"
+              },
+              "value": "AT02"
+            },
+            {
+              "id": "mqtt_base_topic",
+              "type": "text",
+              "label": {
+                "en": "Base topic",
+                "nl": "Basistopic"
+              },
+              "value": "at02"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "label": {
+            "en": "Connection monitoring",
+            "nl": "Verbindingsbewaking"
+          },
+          "children": [
+            {
+              "id": "offline_timeout",
+              "type": "number",
+              "label": {
+                "en": "Offline timeout",
+                "nl": "Offline na"
+              },
+              "value": 180,
+              "min": 30,
+              "max": 3600,
+              "step": 10,
+              "units": {
+                "en": "seconds",
+                "nl": "seconden"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "widgets": {
+    "at02-overview": {
+      "name": {
+        "en": "AT-02 BBQ Overview",
+        "nl": "AT-02 BBQ Overzicht"
+      },
+      "height": 360,
+      "transparent": false,
+      "settings": [
+        {
+          "id": "device",
+          "type": "devices",
+          "title": {
+            "en": "AT-02 device",
+            "nl": "AT-02-apparaat"
+          },
+          "singular": true,
+          "scope": "app",
+          "filter": {
+            "class": "sensor",
+            "capabilities": "measure_temperature.probe1"
+          }
+        },
+        {
+          "id": "refresh_interval",
+          "type": "dropdown",
+          "title": {
+            "en": "Refresh interval",
+            "nl": "Verversingsinterval"
+          },
+          "value": "2",
+          "values": [
+            {
+              "id": "1",
+              "title": {
+                "en": "1 second",
+                "nl": "1 seconde"
+              }
+            },
+            {
+              "id": "2",
+              "title": {
+                "en": "2 seconds",
+                "nl": "2 seconden"
+              }
+            },
+            {
+              "id": "5",
+              "title": {
+                "en": "5 seconds",
+                "nl": "5 seconden"
+              }
+            }
+          ]
+        }
+      ],
+      "api": {
+        "getStatus": {
+          "method": "GET",
+          "path": "/status"
+        }
+      },
+      "id": "at02-overview"
+    }
+  },
+  "capabilities": {
+    "active_probe": {
+      "type": "enum",
+      "title": {
+        "en": "Active probe",
+        "nl": "Actieve probe"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "values": [
+        {
+          "id": "probe1",
+          "title": {
+            "en": "Probe 1",
+            "nl": "Probe 1"
+          }
+        },
+        {
+          "id": "probe2",
+          "title": {
+            "en": "Probe 2",
+            "nl": "Probe 2"
+          }
+        },
+        {
+          "id": "probe3",
+          "title": {
+            "en": "Probe 3",
+            "nl": "Probe 3"
+          }
+        },
+        {
+          "id": "probe4",
+          "title": {
+            "en": "Probe 4",
+            "nl": "Probe 4"
+          }
+        }
+      ]
+    },
+    "bbq_status": {
+      "type": "enum",
+      "title": {
+        "en": "BBQ status",
+        "nl": "BBQ-status"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "offline",
+          "title": {
+            "en": "Offline",
+            "nl": "Offline"
+          }
+        },
+        {
+          "id": "connecting",
+          "title": {
+            "en": "Connecting",
+            "nl": "Verbinden"
+          }
+        },
+        {
+          "id": "off",
+          "title": {
+            "en": "Off",
+            "nl": "Uit"
+          }
+        },
+        {
+          "id": "starting",
+          "title": {
+            "en": "Starting",
+            "nl": "Opstarten"
+          }
+        },
+        {
+          "id": "warming",
+          "title": {
+            "en": "Heating up",
+            "nl": "Opwarmen"
+          }
+        },
+        {
+          "id": "almost_ready",
+          "title": {
+            "en": "Almost ready",
+            "nl": "Bijna klaar"
+          }
+        },
+        {
+          "id": "ready",
+          "title": {
+            "en": "Ready",
+            "nl": "Gereed"
+          }
+        },
+        {
+          "id": "grilling",
+          "title": {
+            "en": "Cooking",
+            "nl": "Grillen"
+          }
+        },
+        {
+          "id": "cooling",
+          "title": {
+            "en": "Cooling down",
+            "nl": "Afkoelen"
+          }
+        }
+      ]
+    },
+    "cooking_profile": {
+      "type": "enum",
+      "title": {
+        "en": "Cooking profile",
+        "nl": "Bereidingsprofiel"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker",
+      "values": [
+        {
+          "id": "manual",
+          "title": {
+            "en": "Manual",
+            "nl": "Handmatig"
+          }
+        },
+        {
+          "id": "steak_rare",
+          "title": {
+            "en": "Steak rare",
+            "nl": "Steak rare"
+          }
+        },
+        {
+          "id": "steak_medium_rare",
+          "title": {
+            "en": "Steak medium rare",
+            "nl": "Steak medium rare"
+          }
+        },
+        {
+          "id": "steak_medium",
+          "title": {
+            "en": "Steak medium",
+            "nl": "Steak medium"
+          }
+        },
+        {
+          "id": "chicken",
+          "title": {
+            "en": "Chicken",
+            "nl": "Kip"
+          }
+        },
+        {
+          "id": "pulled_pork",
+          "title": {
+            "en": "Pulled pork",
+            "nl": "Pulled pork"
+          }
+        },
+        {
+          "id": "brisket",
+          "title": {
+            "en": "Brisket",
+            "nl": "Brisket"
+          }
+        },
+        {
+          "id": "ribs",
+          "title": {
+            "en": "Spare ribs",
+            "nl": "Spareribs"
+          }
+        },
+        {
+          "id": "salmon",
+          "title": {
+            "en": "Salmon",
+            "nl": "Zalm"
+          }
+        },
+        {
+          "id": "pizza",
+          "title": {
+            "en": "Pizza",
+            "nl": "Pizza"
+          }
+        }
+      ]
+    },
+    "cooking_progress": {
+      "type": "number",
+      "title": {
+        "en": "Cooking progress",
+        "nl": "Bereidingsvoortgang"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "%",
+        "nl": "%"
+      },
+      "decimals": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "uiComponent": "sensor"
+    },
+    "live_summary": {
+      "type": "string",
+      "title": {
+        "en": "Live overview",
+        "nl": "Live-overzicht"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "pitmaster_overview": {
+      "type": "string",
+      "title": {
+        "en": "Pitmaster overview",
+        "nl": "Pitmaster-overzicht"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "progress_display": {
+      "type": "string",
+      "title": {
+        "en": "Progress display",
+        "nl": "Voortgang"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "rate_status": {
+      "type": "enum",
+      "title": {
+        "en": "Temperature trend",
+        "nl": "Temperatuurtrend"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "unknown",
+          "title": {
+            "en": "Unknown",
+            "nl": "Onbekend"
+          }
+        },
+        {
+          "id": "rising",
+          "title": {
+            "en": "Rising",
+            "nl": "Stijgend"
+          }
+        },
+        {
+          "id": "stable",
+          "title": {
+            "en": "Stable",
+            "nl": "Stabiel"
+          }
+        },
+        {
+          "id": "falling",
+          "title": {
+            "en": "Falling",
+            "nl": "Dalend"
+          }
+        }
+      ]
+    },
+    "remaining_difference": {
+      "type": "number",
+      "title": {
+        "en": "Degrees remaining",
+        "nl": "Nog te gaan"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C",
+        "nl": "°C"
+      },
+      "decimals": 1,
+      "min": 0,
+      "max": 250,
+      "step": 0.1,
+      "uiComponent": "sensor"
+    },
+    "remaining_time": {
+      "type": "number",
+      "title": {
+        "en": "Estimated time remaining",
+        "nl": "Geschatte resterende tijd"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "min",
+        "nl": "min"
+      },
+      "decimals": 0,
+      "min": 0,
+      "max": 1440,
+      "step": 1,
+      "uiComponent": "sensor"
+    },
+    "remaining_time_text": {
+      "type": "string",
+      "title": {
+        "en": "Time remaining",
+        "nl": "Resterende tijd"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "selected_profile": {
+      "type": "enum",
+      "title": {
+        "en": "Selected dish",
+        "nl": "Gekozen gerecht"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "manual",
+          "title": {
+            "en": "Manual",
+            "nl": "Handmatig"
+          }
+        },
+        {
+          "id": "steak_rare",
+          "title": {
+            "en": "Steak rare",
+            "nl": "Steak rare"
+          }
+        },
+        {
+          "id": "steak_medium_rare",
+          "title": {
+            "en": "Steak medium rare",
+            "nl": "Steak medium rare"
+          }
+        },
+        {
+          "id": "steak_medium",
+          "title": {
+            "en": "Steak medium",
+            "nl": "Steak medium"
+          }
+        },
+        {
+          "id": "chicken",
+          "title": {
+            "en": "Chicken",
+            "nl": "Kip"
+          }
+        },
+        {
+          "id": "pulled_pork",
+          "title": {
+            "en": "Pulled pork",
+            "nl": "Pulled pork"
+          }
+        },
+        {
+          "id": "brisket",
+          "title": {
+            "en": "Brisket",
+            "nl": "Brisket"
+          }
+        },
+        {
+          "id": "ribs",
+          "title": {
+            "en": "Spare ribs",
+            "nl": "Spareribs"
+          }
+        },
+        {
+          "id": "salmon",
+          "title": {
+            "en": "Salmon",
+            "nl": "Zalm"
+          }
+        },
+        {
+          "id": "pizza",
+          "title": {
+            "en": "Pizza",
+            "nl": "Pizza"
+          }
+        }
+      ]
+    },
+    "session_active": {
+      "type": "boolean",
+      "title": {
+        "en": "BBQ session",
+        "nl": "BBQ-sessie"
+      },
+      "getable": true,
+      "setable": true,
+      "uiComponent": "toggle"
+    },
+    "session_duration": {
+      "type": "number",
+      "title": {
+        "en": "Session duration",
+        "nl": "Sessieduur"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "min",
+        "nl": "min"
+      },
+      "decimals": 0,
+      "min": 0,
+      "max": 10080,
+      "step": 1,
+      "uiComponent": "sensor"
+    },
+    "session_summary": {
+      "type": "string",
+      "title": {
+        "en": "Session summary",
+        "nl": "Sessiesamenvatting"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "signal_quality": {
+      "type": "enum",
+      "title": {
+        "en": "Bluetooth quality",
+        "nl": "Bluetooth-kwaliteit"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "unknown",
+          "title": {
+            "en": "Unknown",
+            "nl": "Onbekend"
+          }
+        },
+        {
+          "id": "excellent",
+          "title": {
+            "en": "Excellent",
+            "nl": "Uitstekend"
+          }
+        },
+        {
+          "id": "good",
+          "title": {
+            "en": "Good",
+            "nl": "Goed"
+          }
+        },
+        {
+          "id": "fair",
+          "title": {
+            "en": "Fair",
+            "nl": "Redelijk"
+          }
+        },
+        {
+          "id": "weak",
+          "title": {
+            "en": "Weak",
+            "nl": "Zwak"
+          }
+        }
+      ]
+    },
+    "target_summary": {
+      "type": "string",
+      "title": {
+        "en": "Active targets",
+        "nl": "Actieve doelen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
+    "temperature_rate": {
+      "type": "number",
+      "title": {
+        "en": "Temperature rate",
+        "nl": "Temperatuurstijging"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "°C/min",
+        "nl": "°C/min"
+      },
+      "decimals": 1,
+      "min": -20,
+      "max": 20,
+      "step": 0.1,
+      "uiComponent": "sensor"
+    }
+  }
+}

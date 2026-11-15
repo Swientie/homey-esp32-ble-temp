@@ -1,0 +1,40 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Temperature trend",
+    "nl": "Temperatuurtrend"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "values": [
+    {
+      "id": "unknown",
+      "title": {
+        "en": "Unknown",
+        "nl": "Onbekend"
+      }
+    },
+    {
+      "id": "rising",
+      "title": {
+        "en": "Rising",
+        "nl": "Stijgend"
+      }
+    },
+    {
+      "id": "stable",
+      "title": {
+        "en": "Stable",
+        "nl": "Stabiel"
+      }
+    },
+    {
+      "id": "falling",
+      "title": {
+        "en": "Falling",
+        "nl": "Dalend"
+      }
+    }
+  ]
+}

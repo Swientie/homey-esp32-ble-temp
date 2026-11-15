@@ -1,0 +1,18 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Degrees remaining",
+    "nl": "Nog te gaan"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "\u00b0C",
+    "nl": "\u00b0C"
+  },
+  "decimals": 1,
+  "min": 0,
+  "max": 250,
+  "step": 0.1,
+  "uiComponent": "sensor"
+}

@@ -1,0 +1,40 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Active probe",
+    "nl": "Actieve probe"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "probe1",
+      "title": {
+        "en": "Probe 1",
+        "nl": "Probe 1"
+      }
+    },
+    {
+      "id": "probe2",
+      "title": {
+        "en": "Probe 2",
+        "nl": "Probe 2"
+      }
+    },
+    {
+      "id": "probe3",
+      "title": {
+        "en": "Probe 3",
+        "nl": "Probe 3"
+      }
+    },
+    {
+      "id": "probe4",
+      "title": {
+        "en": "Probe 4",
+        "nl": "Probe 4"
+      }
+    }
+  ]
+}

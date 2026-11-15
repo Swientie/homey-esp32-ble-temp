@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Live overview",
+    "nl": "Live-overzicht"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

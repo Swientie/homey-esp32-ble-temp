@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Time remaining",
+    "nl": "Resterende tijd"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}

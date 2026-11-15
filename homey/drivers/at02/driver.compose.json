@@ -1,0 +1,175 @@
+{
+  "name": {
+    "en": "AT-02 BBQ",
+    "nl": "AT-02 BBQ"
+  },
+  "class": "sensor",
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "lan"
+  ],
+  "capabilities": [
+    "measure_temperature.probe1",
+    "target_temperature.probe1",
+    "alarm_generic.probe1",
+    "measure_temperature.probe2",
+    "target_temperature.probe2",
+    "alarm_generic.probe2",
+    "measure_temperature.probe3",
+    "target_temperature.probe3",
+    "alarm_generic.probe3",
+    "measure_temperature.probe4",
+    "target_temperature.probe4",
+    "alarm_generic.probe4",
+    "measure_temperature.bbq",
+    "target_temperature.bbq",
+    "alarm_generic.bbq",
+    "measure_signal_strength",
+    "alarm_generic"
+  ],
+  "capabilitiesOptions": {
+    "measure_temperature.probe1": {
+      "title": {
+        "en": "Probe 1",
+        "nl": "Probe 1"
+      },
+      "decimals": 1
+    },
+    "target_temperature.probe1": {
+      "title": {
+        "en": "Target probe 1",
+        "nl": "Doel probe 1"
+      },
+      "min": 0,
+      "max": 250,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_generic.probe1": {
+      "title": {
+        "en": "Target reached 1",
+        "nl": "Doel bereikt 1"
+      }
+    },
+    "measure_temperature.probe2": {
+      "title": {
+        "en": "Probe 2",
+        "nl": "Probe 2"
+      },
+      "decimals": 1
+    },
+    "target_temperature.probe2": {
+      "title": {
+        "en": "Target probe 2",
+        "nl": "Doel probe 2"
+      },
+      "min": 0,
+      "max": 250,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_generic.probe2": {
+      "title": {
+        "en": "Target reached 2",
+        "nl": "Doel bereikt 2"
+      }
+    },
+    "measure_temperature.probe3": {
+      "title": {
+        "en": "Probe 3",
+        "nl": "Probe 3"
+      },
+      "decimals": 1
+    },
+    "target_temperature.probe3": {
+      "title": {
+        "en": "Target probe 3",
+        "nl": "Doel probe 3"
+      },
+      "min": 0,
+      "max": 250,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_generic.probe3": {
+      "title": {
+        "en": "Target reached 3",
+        "nl": "Doel bereikt 3"
+      }
+    },
+    "measure_temperature.probe4": {
+      "title": {
+        "en": "Probe 4",
+        "nl": "Probe 4"
+      },
+      "decimals": 1
+    },
+    "target_temperature.probe4": {
+      "title": {
+        "en": "Target probe 4",
+        "nl": "Doel probe 4"
+      },
+      "min": 0,
+      "max": 250,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_generic.probe4": {
+      "title": {
+        "en": "Target reached 4",
+        "nl": "Doel bereikt 4"
+      }
+    },
+    "measure_temperature.bbq": {
+      "title": {
+        "en": "BBQ",
+        "nl": "BBQ"
+      },
+      "decimals": 1
+    },
+    "target_temperature.bbq": {
+      "title": {
+        "en": "BBQ target",
+        "nl": "Doel BBQ"
+      },
+      "min": 0,
+      "max": 250,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_generic.bbq": {
+      "title": {
+        "en": "BBQ target reached",
+        "nl": "BBQ-doel bereikt"
+      }
+    },
+    "measure_signal_strength": {
+      "title": {
+        "en": "Bluetooth signal",
+        "nl": "Bluetooth-signaal"
+      },
+      "decimals": 0
+    },
+    "alarm_generic": {
+      "title": {
+        "en": "Connection lost",
+        "nl": "Verbinding verbroken"
+      }
+    }
+  },
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ]
+}

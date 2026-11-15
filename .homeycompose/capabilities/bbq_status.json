@@ -1,0 +1,75 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "BBQ status",
+    "nl": "BBQ-status"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "values": [
+    {
+      "id": "offline",
+      "title": {
+        "en": "Offline",
+        "nl": "Offline"
+      }
+    },
+    {
+      "id": "connecting",
+      "title": {
+        "en": "Connecting",
+        "nl": "Verbinden"
+      }
+    },
+    {
+      "id": "off",
+      "title": {
+        "en": "Off",
+        "nl": "Uit"
+      }
+    },
+    {
+      "id": "starting",
+      "title": {
+        "en": "Starting",
+        "nl": "Opstarten"
+      }
+    },
+    {
+      "id": "warming",
+      "title": {
+        "en": "Heating up",
+        "nl": "Opwarmen"
+      }
+    },
+    {
+      "id": "almost_ready",
+      "title": {
+        "en": "Almost ready",
+        "nl": "Bijna klaar"
+      }
+    },
+    {
+      "id": "ready",
+      "title": {
+        "en": "Ready",
+        "nl": "Gereed"
+      }
+    },
+    {
+      "id": "grilling",
+      "title": {
+        "en": "Cooking",
+        "nl": "Grillen"
+      }
+    },
+    {
+      "id": "cooling",
+      "title": {
+        "en": "Cooling down",
+        "nl": "Afkoelen"
+      }
+    }
+  ]
+}

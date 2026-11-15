@@ -1,0 +1,18 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Estimated time remaining",
+    "nl": "Geschatte resterende tijd"
+  },
+  "getable": true,
+  "setable": false,
+  "units": {
+    "en": "min",
+    "nl": "min"
+  },
+  "decimals": 0,
+  "min": 0,
+  "max": 1440,
+  "step": 1,
+  "uiComponent": "sensor"
+}

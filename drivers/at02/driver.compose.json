@@ -13,17 +13,38 @@
   "capabilities": [
     "measure_temperature.probe1",
     "target_temperature.probe1",
-    "alarm_temperature.probe1",
+    "alarm_generic.probe1",
     "measure_temperature.probe2",
     "target_temperature.probe2",
-    "alarm_temperature.probe2",
+    "alarm_generic.probe2",
     "measure_temperature.probe3",
     "target_temperature.probe3",
-    "alarm_temperature.probe3",
+    "alarm_generic.probe3",
     "measure_temperature.probe4",
     "target_temperature.probe4",
-    "alarm_temperature.probe4",
+    "alarm_generic.probe4",
     "measure_temperature.bbq",
+    "target_temperature.bbq",
+    "alarm_generic.bbq",
+    "measure_signal_strength",
+    "cooking_profile",
+    "selected_profile",
+    "session_active",
+    "session_duration",
+    "pitmaster_overview",
+    "session_summary",
+    "signal_quality",
+    "remaining_difference",
+    "live_summary",
+    "target_summary",
+    "progress_display",
+    "rate_status",
+    "remaining_time_text",
+    "cooking_progress",
+    "temperature_rate",
+    "remaining_time",
+    "active_probe",
+    "bbq_status",
     "alarm_generic"
   ],
   "capabilitiesOptions": {
@@ -36,15 +57,15 @@
     },
     "target_temperature.probe1": {
       "title": {
-        "en": "Target 1",
+        "en": "Target probe 1",
         "nl": "Doel probe 1"
       },
       "min": 0,
-      "max": 150,
+      "max": 250,
       "step": 0.5,
       "decimals": 1
     },
-    "alarm_temperature.probe1": {
+    "alarm_generic.probe1": {
       "title": {
         "en": "Target reached 1",
         "nl": "Doel bereikt 1"
@@ -59,15 +80,15 @@
     },
     "target_temperature.probe2": {
       "title": {
-        "en": "Target 2",
+        "en": "Target probe 2",
         "nl": "Doel probe 2"
       },
       "min": 0,
-      "max": 150,
+      "max": 250,
       "step": 0.5,
       "decimals": 1
     },
-    "alarm_temperature.probe2": {
+    "alarm_generic.probe2": {
       "title": {
         "en": "Target reached 2",
         "nl": "Doel bereikt 2"
@@ -82,15 +103,15 @@
     },
     "target_temperature.probe3": {
       "title": {
-        "en": "Target 3",
+        "en": "Target probe 3",
         "nl": "Doel probe 3"
       },
       "min": 0,
-      "max": 150,
+      "max": 250,
       "step": 0.5,
       "decimals": 1
     },
-    "alarm_temperature.probe3": {
+    "alarm_generic.probe3": {
       "title": {
         "en": "Target reached 3",
         "nl": "Doel bereikt 3"
@@ -105,15 +126,15 @@
     },
     "target_temperature.probe4": {
       "title": {
-        "en": "Target 4",
+        "en": "Target probe 4",
         "nl": "Doel probe 4"
       },
       "min": 0,
-      "max": 150,
+      "max": 250,
       "step": 0.5,
       "decimals": 1
     },
-    "alarm_temperature.probe4": {
+    "alarm_generic.probe4": {
       "title": {
         "en": "Target reached 4",
         "nl": "Doel bereikt 4"
@@ -126,10 +147,141 @@
       },
       "decimals": 1
     },
+    "target_temperature.bbq": {
+      "title": {
+        "en": "BBQ target",
+        "nl": "Doel BBQ"
+      },
+      "min": 0,
+      "max": 250,
+      "step": 0.5,
+      "decimals": 1
+    },
+    "alarm_generic.bbq": {
+      "title": {
+        "en": "BBQ target reached",
+        "nl": "BBQ-doel bereikt"
+      }
+    },
+    "measure_signal_strength": {
+      "title": {
+        "en": "Bluetooth signal",
+        "nl": "Bluetooth-signaal"
+      },
+      "decimals": 0
+    },
+    "bbq_status": {
+      "title": {
+        "en": "BBQ status",
+        "nl": "BBQ-status"
+      }
+    },
     "alarm_generic": {
       "title": {
         "en": "Connection lost",
         "nl": "Verbinding verbroken"
+      }
+    },
+    "cooking_profile": {
+      "title": {
+        "en": "Cooking profile",
+        "nl": "Bereidingsprofiel"
+      }
+    },
+    "active_probe": {
+      "title": {
+        "en": "Active probe",
+        "nl": "Actieve probe"
+      }
+    },
+    "selected_profile": {
+      "title": {
+        "en": "Selected dish",
+        "nl": "Gekozen gerecht"
+      }
+    },
+    "session_active": {
+      "title": {
+        "en": "BBQ session",
+        "nl": "BBQ-sessie"
+      }
+    },
+    "session_duration": {
+      "title": {
+        "en": "Session duration",
+        "nl": "Sessieduur"
+      }
+    },
+    "cooking_progress": {
+      "title": {
+        "en": "Cooking progress",
+        "nl": "Bereidingsvoortgang"
+      }
+    },
+    "temperature_rate": {
+      "title": {
+        "en": "Temperature rate",
+        "nl": "Temperatuurstijging"
+      }
+    },
+    "remaining_time": {
+      "title": {
+        "en": "Estimated time remaining",
+        "nl": "Geschatte resterende tijd"
+      }
+    },
+    "live_summary": {
+      "title": {
+        "en": "Live overview",
+        "nl": "Live-overzicht"
+      }
+    },
+    "target_summary": {
+      "title": {
+        "en": "Active targets",
+        "nl": "Actieve doelen"
+      }
+    },
+    "progress_display": {
+      "title": {
+        "en": "Progress",
+        "nl": "Voortgang"
+      }
+    },
+    "rate_status": {
+      "title": {
+        "en": "Temperature trend",
+        "nl": "Temperatuurtrend"
+      }
+    },
+    "remaining_time_text": {
+      "title": {
+        "en": "Time remaining",
+        "nl": "Resterende tijd"
+      }
+    },
+    "pitmaster_overview": {
+      "title": {
+        "en": "Pitmaster overview",
+        "nl": "Pitmaster-overzicht"
+      }
+    },
+    "session_summary": {
+      "title": {
+        "en": "Session summary",
+        "nl": "Sessiesamenvatting"
+      }
+    },
+    "signal_quality": {
+      "title": {
+        "en": "Bluetooth quality",
+        "nl": "Bluetooth-kwaliteit"
+      }
+    },
+    "remaining_difference": {
+      "title": {
+        "en": "Degrees remaining",
+        "nl": "Nog te gaan"
       }
     }
   },

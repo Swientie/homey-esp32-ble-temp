@@ -1,0 +1,82 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Cooking profile",
+    "nl": "Bereidingsprofiel"
+  },
+  "getable": true,
+  "setable": true,
+  "uiComponent": "picker",
+  "values": [
+    {
+      "id": "manual",
+      "title": {
+        "en": "Manual",
+        "nl": "Handmatig"
+      }
+    },
+    {
+      "id": "steak_rare",
+      "title": {
+        "en": "Steak rare",
+        "nl": "Steak rare"
+      }
+    },
+    {
+      "id": "steak_medium_rare",
+      "title": {
+        "en": "Steak medium rare",
+        "nl": "Steak medium rare"
+      }
+    },
+    {
+      "id": "steak_medium",
+      "title": {
+        "en": "Steak medium",
+        "nl": "Steak medium"
+      }
+    },
+    {
+      "id": "chicken",
+      "title": {
+        "en": "Chicken",
+        "nl": "Kip"
+      }
+    },
+    {
+      "id": "pulled_pork",
+      "title": {
+        "en": "Pulled pork",
+        "nl": "Pulled pork"
+      }
+    },
+    {
+      "id": "brisket",
+      "title": {
+        "en": "Brisket",
+        "nl": "Brisket"
+      }
+    },
+    {
+      "id": "ribs",
+      "title": {
+        "en": "Spare ribs",
+        "nl": "Spareribs"
+      }
+    },
+    {
+      "id": "salmon",
+      "title": {
+        "en": "Salmon",
+        "nl": "Zalm"
+      }
+    },
+    {
+      "id": "pizza",
+      "title": {
+        "en": "Pizza",
+        "nl": "Pizza"
+      }
+    }
+  ]
+}

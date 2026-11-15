@@ -1,0 +1,10 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Session summary",
+    "nl": "Sessiesamenvatting"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor"
+}
